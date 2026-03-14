@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Strings</title>
+    <script>
+        var nome = ' Esthefany Lorrany Xavier Cruz ';
+        //propriedade length: retorna o número de caracteres em uma string.
+        document.write(nome.length);
+        //função charAt(): retorna o caractere em uma posição específica.
+        document.write('<br>' + nome.charAt(5));
+        //função indexOf(): retorna a posição da primeira ocorrência de um caractere ou substring.
+        document.write('<br>' + nome.indexOf('s'));
+        //função replace(): substitui parte de uma string por outra.
+        document.write('<br>' + nome.replace('Esthefany', 'Esther'));
+        //função substr(): retorna uma parte de uma string, especificando a posição inicial e o número de caracteres.
+        document.write('<br>' + nome.substr(0, 8));
+        //função toLowerCase(): converte uma string para letras minúsculas.
+        document.write('<br>' + nome.toLowerCase());
+        //função toUpperCase(): converte uma string para letras maiúsculas.
+        document.write('<br>' + nome.toUpperCase());
+        //função trim(): remove os espaços em banco do início e do final de uma string.
+        document.write('<br>' + '-' + nome.trim() + '-');
+        //função split(): divide uma string em um array de substrings, com base em um separador especificado.
+        var partes = nome.split(' '); //dividindo a string 
+        document.write('<br>' + partes);
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

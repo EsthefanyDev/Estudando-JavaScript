@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundamentos JavaScript</title>
+    <script>
+        // null representa a ausência intencional de um valor.
+        var teste = null
+
+        // undefined é um valor atribuído a uma variável que foi declarada, mas ainda não foi inicializada, ou seja, não recebeu um valor.
+        var teste2
+
+        console.log(teste)
+        console.log(teste2)
+
+
+
+        var nota = prompt("Digite a nota do aluno: ")
+        var faltas = prompt('Digite o número de faltas do aluno:')
+        var media = 7 
+        var faltas_maximas = 18
+
+        if (nota >= media && faltas <= faltas_maximas) {
+            document.write('Aprovado')
+        } else {
+            document.write('Reprovado')
+        }
+        
+
+       document.write('<hr />')
+
+
+        // operador ternario é uma forma concisa de escrever uma expressão condicional. Ele é composto por três partes: a condição, o valor a ser retornado se a condição for verdadeira e o valor a ser retornado se a condição for falsa. A sintaxe é a seguinte:
+        var resultado = nota >= media && faltas <= faltas_maximas ? 'Aprovado' : 'Reprovado'
+
+        document.write('Resultado: ' + resultado)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

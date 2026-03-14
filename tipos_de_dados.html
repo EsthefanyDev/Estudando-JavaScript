@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 - Tipos de dados</title>
+    <script>
+        var nome = 'João';
+var idade = 28;
+var time = null;
+var altura; 
+var simbolo = Symbol('simbolo');
+
+// typeof retorna o tipo de dado.
+console.log('------Tipos de dados------');
+console.log(typeof nome); 
+console.log(typeof idade); 
+console.log(typeof time); 
+console.log(typeof altura); 
+console.log(typeof simbolo);
+
+//Strings
+console.log('------Strings------');
+var nomeCompleto = 'João Silva';
+var saudacao = "Olá, " + nomeCompleto + "!"; 
+console.log(saudacao);
+
+var gols = 10;
+var frase = 'joao marcou ' + gols + ' gols';
+console.log(frase);
+
+var fraseTemplate = `João marcou ${gols} gols`; // Utilizado Template literals para interpolação de varáveis.
+console.log(fraseTemplate);
+ 
+
+console.log('------Exercício------');
+//Declare uma variável contendo uma string
+var carro = 'Fuscão Preto';
+//Declare uma variável contendo um número dentro de uma string
+var ano = '1980';
+//Declare uma variável com a sua idade
+var idade = 25;
+// Declare duas variáveis, uma com seu nome e outra com seu sobrenome e some as mesmas
+var nome = 'Esthefany';
+var sobrenome = 'Lorrany';
+var nomeCompleto = nome + ' ' + sobrenome;
+var nomeCompletoTemplate = `${nome} ${sobrenome}`;
+console.log(nomeCompleto);
+console.log(nomeCompletoTemplate);
+
+// Coloque a seguinte frase em uma variável: It's time.
+var frase = "It's time.";
+console.log(frase);
+
+//Verifique o tipo da varável que contém o seu nome
+console.log(typeof nome);
+
+// Numeros
+console.log('------Números------');
+
+var idade = 30;
+var gols = 1000;
+var pi = 3.14;
+var exp = 2e10; // Notação científica para representar números grandes (2 x 10^10)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

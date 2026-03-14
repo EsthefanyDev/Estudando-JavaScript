@@ -1,0 +1,40 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funções Callback</title>
+        <script>
+            
+            function exibirArtigo(id, callbackSucesso, callbackErro) {
+               
+                // lógica recuperar o id via requisição HTTP
+                if (true){
+                    callbackSucesso("Funções de Callback em JS", "Funções de callback são fuções passadas como argumento para outras funções, que as executam quando necessário. Elas são muito utilizadas para lidar com operações assíncronas(como requisições HTTP, timers, etc) e para garantir que um código seja executado somente após a conclusão de uma tarefa específica.");
+                } else {
+                    callbackErro("Erro ao recuperar os dados.");
+                }
+            }
+
+            // explicação: função anônima atribuída a uma variável.
+            var callbackSucesso = function(titulo, descricao){
+                document.write("<h1>" + titulo + "</h1>");
+                document.write("<hr>");                    
+                document.write("<p>" + descricao + "</p>");
+            } 
+            var callbackErro = function(erro){
+                document.write("<p><b>Erro:</b> " + erro + "</p>");
+            }
+            // chamando a função exibirArtigo, passando o id e as funções de callback como argumentos.
+            exibirArtigo(1, callbackSucesso, callbackErro); // Esse trecho funciona da seguinte maneira: a função exibirArtigo é chamada com um id (neste caso, 1) e as funções de callback para sucesso e erro. Dentro da função exibirArtigo, a lógica simula uma operação de recuperação de dados. Se a operação for bem-sucedida (simulada aqui com um if que sempre retorna true), a função de callback de sucesso é chamada, passando o título e a descrição do artigo
+                
+            //Resumindo o código: a função exibirArtigo recebe um id e duas funções de callback, uma para o caso de sucesso e outra para o caso de erro. Dentro da função, há uma lógica (simulada aqui com um if) para determinar se a recuperação dos dados foi bem-sucedida ou não. Dependendo do resultado, a função chama o callback apropriado, passando os dados ou a mensagem de erro.
+        </script>
+    </head>
+    <body>
+        
+    </body>
+    </html>
+
+
+    
