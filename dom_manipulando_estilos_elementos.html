@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Manipulando Estilos Elmentos</title>
+    <script>
+        function modificar_estilo(CorDeFundo, largura, altura){
+            document.getElementById('quadrado').style.background = CorDeFundo
+            document.getElementById('quadrado').style.width = largura
+            document.getElementById('quadrado').style.height = altura
+        }
+    </script>
+</head>
+<body>
+    <div style="background: cadetblue; padding: 40px; width: 300px; display: flex; flex-direction: column; align-items: center;">
+        <h2>Manipulando estilos</h2>
+        
+        <button onclick="modificar_estilo('#FF0000', '200px')" type="button">Vermelho</button>
+        <button onclick="modificar_estilo('#00FF00', '150px', '20px')" type="button">Verde</button>
+        <button onclick="modificar_estilo('#0000FF', '150px', '200px')" type="button">Azul</button>
+        <hr>
+        <div id="quadrado" style="width: 150px; height: 150px; border: solid 3px #000 ;"></div>
+    </div>
+</body>
+</html>

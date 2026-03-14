@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Selecionando Objetos</title>
+    
+</head>
+<body>
+    <h2>Exemplo de seleção de elementos no DOM</h2>
+    <input type="text"
+    placeholder="Digite seu nome"
+    id="nome_usuario"
+    class="campo_texto"
+    name="nome">
+    <script>
+        /*
+        O JavaScript pode acessar elementos HTML 
+        através de diferentes métodos no document.
+        */
+
+        // --------- Selecionando elemento pelo ID --------------
+        console.log(document.getElementById('nome_usuario'))
+        // --------- Selecionando elemento pela TAG  --------------
+        console.log(document.getElementsByTagName('input'))
+        // --------- Selecionar elementos pela CLASS --------------
+        console.log(document.getElementsByClassName('campo_texto'))
+        // --------- Selecionar elementos pelo NAME --------------
+        console.log(document.getElementsByName('nome'))
+
+        /*
+        Quando o método retorna uma lista, precisamos
+        acessar a posição do elemento.
+
+        Exemplo:
+        */
+
+        console.log(document.getElementsByName('nome')[0])
+
+    </script>
+</body>
+</html>

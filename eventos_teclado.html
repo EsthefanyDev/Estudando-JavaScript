@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Teclado</title>
+    <script>
+        function acao1() {
+            alert('Evento disparado')
+        }
+    </script>
+</head>
+<body>
+    <!-- onkeydown -> evento disparado quando uma tecla (qualquer) do teclado é pressionada -->
+    <input onkeydown="acao1()" type="text" placeholder="onkeydown">
+
+    <!-- onkeyup -> evento disparado quando a tecla do teclado é solta (após ser precionada)-->
+    <input onkeyup="acao1()" type="text" placeholder="onkeyup">
+
+    <!-- onkeypress -> evento disparado quando uma tecla que gera caractere é precionada-->
+    <input onkeypress="acao1()" type="text" placeholder="onkeypress">
+</body>
+</html>

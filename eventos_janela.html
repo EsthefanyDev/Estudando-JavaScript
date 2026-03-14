@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Janela</title>
+    <script>
+        // onload: executa quando a página termina de carregar
+        function pagina_carregada (){
+            console.log('Página totalmente carregada')
+        }
+        // onresize: executa quando a janela do navegador muda de tamanho
+        function redimencionar(){
+            console.log('Janela redimencionada')
+        }
+        // onscroll: executa quando a página é rolada
+        function rolar_pagina(){
+            console.log('Página rolando')
+        }
+        // onfocus: executado quando a janela recebe foco
+        function focar_janela(){
+            console.log('Janela recebeu foco')
+        }
+        // onblur: executa quando a janela perde o foco
+        function desfocar_janela(){
+            console.log('Janela perdeu o foco')
+        }
+    </script>
+</head>
+<body onload="pagina_carregada()"
+      onresize="redimencionar()"
+      onscroll="rolar_pagina()" 
+      onfocus="focar_janela()" 
+      onblur="desfocar_janela()"
+    
+>
+    <div style="height:3000px; width: 125px; background: #f1bf61; padding: 5px;">
+        Role a página para disparar o evento de scroll
+    </div>
+</body>
+</html>
