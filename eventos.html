@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script>
+        function acao () {
+            alert('Evento disparado')
+        }
+         function acao2 () {
+            alert('O cursor do mouse deixou a regiao do elemento')
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+        }
+        .caixa {
+        height: 150px;
+        width: 150px;
+        margin: 20px;
+        }   
+        
+
+    </style>
+</head>
+<body>
+    <!-- onclick → dispara quando clicamos -->
+    <div onclick= "acao()" style="background-color: #0fdd3c; height: 150px; width: 150px;margin: 20px;"></div>
+    <!-- ondblclick → dispara com duplo clique -->
+    <div ondblclick= "acao()" style="background-color: #444; height: 150px; width: 150px; margin: 20px;"></div>
+    <!-- onmouseup → dispara quando soltamos o botão do mouse -->
+    <div onmouseup = "acao()" style="background-color: #e41fb9; height: 150px; width: 150px; margin: 20px;"></div>
+    <!-- onmouseover → dispara quando o mouse entra no elemento -->
+    <div onmouseover= "acao()" style="background-color: #e5e910; height: 150px; width: 150px; margin: 20px; "></div>
+    <!-- onmouseout → dispara quando o mouse sai do elemento -->
+    <div onmouseout= "acao()" style="background-color: #0f65e6; height: 150px; width: 150px; margin: 20px; "></div>
+
+    <!--
+    onclick → quando clicar
+    onmouseup → quando soltar o botão do mouse
+    -->
+    <div onclick= "acao()" onmouseout="acao2()" style="background-color: #e91022; height: 250px; width: 250px; margin: 20px; "></div>
+    
+</body>
+</html>
