@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Fixação de conteúdo</title>
+    <script>
+        function modificarBackgrond(){
+            document.getElementById('campo').style.background = '#FFFF00'
+        }
+        function recuperarValor() {
+            document.getElementById('campo').style.background = ''
+        }
+
+        function testarConteudo(){
+            var caracter = document.getElementById('campo').value
+            if(caracter.length < 3){
+                document.getElementById('campo').style.background = '#FF0000'
+            } else {
+                document.getElementById('campo').style.background = '#00FF00'
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <input id="campo" type="text" onfocus="modificarBackgrond()" onblur="testarConteudo()">
+    
+</body>
+</html>
