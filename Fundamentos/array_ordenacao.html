@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Ordenação</title>
+    <script>
+         /*
+        =====================================================
+        EXEMPLO 1 — ORDENAÇÃO DE STRINGS (TEXTO)
+        =====================================================
+
+        O método sort() ordena os elementos de um array.
+
+        Quando usamos sort() em textos, ele organiza
+        automaticamente em ordem ALFABÉTICA.
+        */
+        var lista_frutas = Array()
+        lista_frutas[0]='Maçã'
+        lista_frutas[1]='Uva'
+        lista_frutas[2]='Banana'
+        lista_frutas[3]='Acerola'
+        //ordenação alfa numerica com base nos valoes dos elementos
+        console.log(lista_frutas.sort())
+
+
+        /*
+        =====================================================
+        EXEMPLO 2 — ORDENAÇÃO DE NÚMEROS
+        =====================================================
+
+        IMPORTANTE:
+
+        O método sort() NÃO ordena números corretamente
+        por padrão.
+
+        Isso acontece porque o JavaScript compara os valores
+        como STRING (texto).
+
+        Exemplo errado:
+        [12, 3, 19] poderia virar [12, 19, 3]
+
+        Para resolver isso, usamos uma função de comparação.
+        */
+        var lista_numeros = Array()
+        lista_numeros[0] = 12
+        lista_numeros[1] = 68
+        lista_numeros[2] = 3
+        lista_numeros[3] = 19
+        lista_numeros[4] = 80
+        lista_numeros[5] = 32
+
+         // Ordenando os números usando uma função de comparação
+        console.log(lista_numeros.sort(ordena_numeros))
+
+         
+        //função padrão para ordenar numeros
+        function ordena_numeros(a, b){
+            // Ordenação crescente
+            return a - b
+            /*
+        =====================================================
+        FUNÇÃO DE COMPARAÇÃO
+        =====================================================
+
+        Essa função define como os números devem ser ordenados.
+
+        Parâmetros:
+        a = primeiro número
+        b = segundo número
+
+        Regras de retorno:
+
+        < 0 → 'a' vem antes de 'b'
+        > 0 → 'b' vem antes de 'a'
+        = 0 → mantém a ordem atual
+        */
+        }
+
+        /*
+        Se quisermos ordem DECRESCENTE podemos usar:
+
+        return b - a
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
