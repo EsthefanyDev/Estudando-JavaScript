@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach</title>
+    <script>
+
+        // forma comum (Mais usada)
+        //var listaFuncionarios = ['Viviane', 'Rosangela', 'Miguel', 'Lucas', 'Fernanda']
+
+        // indices não convencionais
+        var listaFuncionarios = Array()
+        listaFuncionarios['x'] = 'Viviane'
+        listaFuncionarios[false] = 'Rosangela'
+        listaFuncionarios[3] = 'Miguel'
+        listaFuncionarios[27] = 'lucas'
+        listaFuncionarios[-12] = 'Fernanda'
+
+        /* IMPORTANTE: O foreach percorre apenas índices numéricos válidos, 
+        ou seja: 'x', false e -12 NAO sao percorridos*/
+       
+        // Função que será executada para cada item do array
+        var f = function(valor, indice){
+            console.log(valor, indice)
+        }
+
+        listaFuncionarios.forEach(f)
+       
+        /*
+        console.log(listaFuncionarios)
+        document.write(listaFuncionarios[3])
+
+        listaFuncionarios.forEach(function(valor, indice, array){
+            //lógica
+            console.log('indice: ' + indice + ' | Valor: ' + valor)
+
+            // Alterando um valor específico
+            if (valor == 'Lucas'){
+                array[indice] = 'Um novo Valor'
+            } 
+        })
+        console.log('Array Atualizado: ', listaFuncionarios)
+        document.write('<h3>Funcionário na posição 3:</h3>')
+        document.write('<br>' + listaFuncionarios[3])
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
