@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <!-- Importa o Babel para permitir o uso de ES6+ no navegador -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- type="text/babel" permite escrever código moderno JS -->
+    <script type="text/babel">
+    
+    class ContaBancaria {
+        constructor(){
+            // "Privado por convenção"
+            this._saldo = 100
+        }
+
+        // GET -> ver saldo
+        get saldo(){
+            return this._saldo
+        }
+
+        // SET -> NÃO vamos usar diretamente (pra mostrar outra forma)
+
+        //Método para depositar
+        depositar(valor){
+            if(valor>0){
+                this._saldo += valor
+            }
+        }
+        //Método para sacar
+        sacar(valor){
+            if(valor > 0 && valor <= this._saldo){
+                this._saldo -= valor
+            } else{
+                console.log("saldo insuficiente!")
+            }
+        }
+    }
+    // Criando conta
+    let conta = new ContaBancaria()
+
+    // acesso direto (não recomendado)
+    conta._saldo = 1000000
+
+    // forma correta
+    conta.depositar(50)
+    conta.sacar(30)
+
+    // usando getter
+    console.log(conta.saldo)
+        
+       
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>

@@ -3,19 +3,54 @@
 
 <head>
     <title></title>
+    <!-- Importa o Babel para permitir o uso de ES6+ no navegador -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
+    <!-- type="text/babel" permite escrever código moderno JS -->
     <script type="text/babel">
+      // ===== CLASSE (ABSTRAÇÃO DO OBJETO TV) =====
       class Tv {
+        // 
         constructor(){
-            this.relacaoCanais = Array(2, 4, 5, 7, 10)
-            this.canalAtivo = 5
-            this.volume = 5
+          // ===== ATRIBUTO "PRIVADO" (CONVENÇÃO) =====
+          // O "_" indica que esse atributo NÃO deve ser acessado diretamente
+          // (JavaScript não obriga, mas é uma convenção de encapsulamento)
+            this._relacaoCanais = Array(2, 4, 5, 7, 10)
+            this._canalAtivo = 5
+            this._volume = 5
+        }
+        /// ===== GETTER =====
+        //Método público para acessar o atributo privado
+        // Funciona como se fosse uma variável: tv.canalAtivo
+        get canalAtivo(){
+        return this._canalAtivo
+        }
+
+        // ===== SETTER =====
+        // Método publico para modificar i atributo privado com validação
+        set canalAtivo(canal){
+          // indexOff verifica se o canal existe na lista
+          // se não existir retorna -1
+          if(this._relacaoCanais.indexOf(canal) !== -1){
+            // Só altera se for um canal válido
+            this._canalAtivo = canal
+          }
+          // Caso contrário, não faz nada (proteção do encapsulamento)
         }
       }
+
+      // ===== USANDO O SETTER =====
       let tv = new Tv()
+      // Aqui NÃo estamos acessando diretamente o atributo
+      // Estamos usando a "pseudo variável" que chama o setter
+      tv.canalAtivo = 7
+      // ===== USANDO O GETTER =====
+      // Aqui chamamos o getter automaticamente
       console.log(tv.canalAtivo)
-        
+      // ===== TESTE DE SEGURANÇA =====
+      // Canal inválido (não existe na lista)
+      tv.canalAtivo = 100
+      // O valor NÃO muda, pois o setter bloqueia
+      console.log(tv.canalAtivo) 
        
     </script>
 </head>
