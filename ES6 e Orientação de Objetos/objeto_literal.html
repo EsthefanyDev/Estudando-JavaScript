@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        // Notação de classe ES6
+        class Produto {
+            constructor(descricao, preco){
+                this.descricao = descricao
+                this.preco = preco
+            }
+            verDescricao(){
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+
+        let produto = new Produto('Notebook', 3560)
+        produto.verDescricao()
+
+        //-----------------------------------------------------------------
+        // Notação de objeto literal/estático
+        let produtoLiteral = {
+            descricao: 'Geladeira',
+            preco: 1800,
+            verDescricao: function(){
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+        produtoLiteral.verDescricao()
+        //-----------------------------------------------------------------
+        // formulário -> servidor
+        //     recupera dados e monta um objeto literal
+        //         obj literal -> JSON -> HTTP -> Server -> Armazena
+    </script>
+</head>
+
+<body>
+    
+</body>
+
+</html>
